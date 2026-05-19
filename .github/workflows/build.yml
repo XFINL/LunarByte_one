@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Check TypeScript
-        run: npx tsc --noEmit --skipLibCheck
+        run: npx tsc --noEmit --skipLibCheck --skipDefaultLibCheck
 
       - name: Success Message
         run: |
