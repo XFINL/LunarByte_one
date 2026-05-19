@@ -1,10 +1,5 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
-apply plugin: "com.facebook.react"
-
-react {
-    autolinkLibrariesWithApp()
-}
 
 android {
     namespace "com.musicapp"
@@ -19,16 +14,13 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            signingConfig signingConfigs.debug
         }
     }
 }
 
 dependencies {
-    implementation("com.facebook.react:react-android")
 }
